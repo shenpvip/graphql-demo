@@ -2,7 +2,7 @@
  * @Author: shenpeng
  * @Date: 2019-02-21 19:59:24
  * @Last Modified by: shenpeng
- * @Last Modified time: 2019-02-21 22:01:30
+ * @Last Modified time: 2019-02-22 00:15:15
  */
 // 告诉graphql从哪里去取数据，并且描述对数据的处理
 
@@ -11,13 +11,6 @@ const resolvers = {
   Query: {
     hello: (parent, { name }, context, info) => {
       return 'hello ' + name
-    },
-    rollDice: (parent, { numDice, numSides }, context, info) => {
-      let output = []
-      for (let i = 0; i < numDice; i++) {
-        output.push(1 + Math.floor(Math.random() * (numSides || 6)))
-      }
-      return output
     },
     todolist: (parent, args, context, info) => {
       return todolist

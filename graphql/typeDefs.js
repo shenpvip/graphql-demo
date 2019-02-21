@@ -2,7 +2,7 @@
  * @Author: shenpeng
  * @Date: 2019-02-21 19:56:10
  * @Last Modified by: shenpeng
- * @Last Modified time: 2019-02-21 22:00:15
+ * @Last Modified time: 2019-02-22 00:15:10
  */
 const typeDefs = `
   type TodoItem {
@@ -13,7 +13,6 @@ const typeDefs = `
 
   type Query {
     hello(name:String = "world"): String
-    rollDice(numDice: Int!, numSides: Int): [Int]
     todolist: [TodoItem!]!
     item(id: ID!): TodoItem!
   }
